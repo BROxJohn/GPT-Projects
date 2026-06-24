@@ -1,10 +1,25 @@
 # Exemple Lottie
 
-Patru animatii Lottie scrise de mana (JSON / format Bodymovin), fara After Effects.
-Sunt fisiere `.json` valide, compatibile cu `lottie-web`, `lottie-react`, Lottie iOS/Android
+Animatii Lottie (JSON / format Bodymovin), fara After Effects.
+Fisiere `.json` valide, compatibile cu `lottie-web`, `lottie-react`, Lottie iOS/Android
 si lottiefiles.com.
 
-## Continut
+## Variante din logo-ul agentiei (cum facem)
+
+Folosesc logo-ul real incorporat in fisier (imagine base64) ca sa arate identic cu brandul.
+Culori brand: galben `#FFDD3F`, mov-inchis `#1D1031`.
+
+| Fisier | Animatie | Recomandat pentru |
+|---|---|---|
+| `logo-pop.json` | Logo-ul complet apare cu scalare + fade | intro / splash |
+| `logo-float.json` | Logo-ul complet pluteste lin (loop) | header, hero |
+| `badge-pop.json` | Insigna "Cf" apare cu pop + mica rotatie | app icon, splash |
+| `badge-pulse.json` | Insigna "Cf" pulseaza usor (loop) | loading, favicon animat |
+| `brand-spinner.json` | Spinner vectorial in galbenul brandului (usor, fara imagine) | loading state UI |
+
+(`badge.png` si `logo-wide.png` sunt sursele optimizate din care s-au generat variantele.)
+
+## Exemple generice (bonus)
 
 | Fisier | Animatie |
 |---|---|
@@ -12,8 +27,6 @@ si lottiefiles.com.
 | `checkmark.json` | Cerc verde care apare cu "pop", apoi un checkmark alb care se deseneaza |
 | `heart.json` | Inima rosie care pulseaza (scale) in bucla |
 | `loading-dots.json` | Trei puncte care saltà secvential (efect "loading") |
-
-Toate sunt 200x200 px, 60 fps.
 
 ## Cum le vezi
 
