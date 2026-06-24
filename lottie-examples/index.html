@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemple Lottie</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #0f1115;
+      color: #e6e8eb;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 { font-weight: 600; }
+    p.sub { color: #9aa0a6; margin-top: -8px; margin-bottom: 36px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #1a1d23;
+      border: 1px solid #2a2e36;
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .anim { width: 200px; height: 200px; margin: 0 auto; }
+    .name { margin-top: 8px; color: #c5c9cf; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Exemple Lottie</h1>
+  <p class="sub">Animatii scrise de mana (.json), rulate cu lottie-web</p>
+
+  <div class="grid">
+    <div class="card"><div class="anim" data-src="spinner.json"></div><div class="name">spinner.json</div></div>
+    <div class="card"><div class="anim" data-src="checkmark.json"></div><div class="name">checkmark.json</div></div>
+    <div class="card"><div class="anim" data-src="heart.json"></div><div class="name">heart.json</div></div>
+    <div class="card"><div class="anim" data-src="loading-dots.json"></div><div class="name">loading-dots.json</div></div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.anim').forEach(function (el) {
+      lottie.loadAnimation({
+        container: el,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: el.getAttribute('data-src')
+      });
+    });
+  </script>
+</body>
+</html>
